@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    time-app (0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.22.3)
+    rack (3.0.11)
+    rake (13.2.1)
+
+PLATFORMS
+  arm64-darwin-23
+  ruby
+
+DEPENDENCIES
+  minitest
+  rack
+  rake
+  time-app!
+
+BUNDLED WITH
+   2.5.10
