@@ -1,0 +1,12 @@
+[Unit]
+Description=time app server
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/time-app
+ExecStart=bundle exec rackup --port 80 --host 0.0.0.0
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

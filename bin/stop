@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+if [ "$(uname -s)" = "Linux" ]; then
+  systemctl stop time-app.service
+  systemctl disable time-app.service
+fi

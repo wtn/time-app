@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /srv/time-app
+    file_exists_behavior: OVERWRITE
+hooks:
+  BeforeInstall:
+    - location: bin/setup
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: bin/start
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: bin/stop
+      timeout: 300
+      runas: root

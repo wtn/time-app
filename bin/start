@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
+set -vx
+
+if [ "$(uname -s)" = "Linux" ]; then
+  systemctl enable time-app.service
+  systemctl start time-app.service
+fi
