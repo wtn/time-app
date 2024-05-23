@@ -4,10 +4,12 @@ require 'rack'
 
 class TimeApp
   VERSION = '0'
+  SERVER = "#{name}/#{VERSION}"
 
   def call(env)
     request = Rack::Request.new env
     response = Rack::Response.new
+    response['server'] = SERVER
 
     case request.path
     when '/'
