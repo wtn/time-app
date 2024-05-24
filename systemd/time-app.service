@@ -5,8 +5,7 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=/srv/time-app
-Environment=PATH=/snap/bin:/usr/local/bin:/usr/bin:/bin
-ExecStart=/snap/bin/bundle exec rackup --port 80 --host 0.0.0.0
+ExecStart=bundle exec rackup --port 80 --host 0.0.0.0
 Restart=always
 
 [Install]
