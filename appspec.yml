@@ -17,3 +17,7 @@ hooks:
     - location: bin/stop
       timeout: 300
       runas: root
+  ValidateService:
+    - location: bin/validate
+      timeout: 300
+      runas: root
