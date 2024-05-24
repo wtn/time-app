@@ -5,7 +5,7 @@ files:
     destination: /srv/time-app
     file_exists_behavior: OVERWRITE
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: bin/setup
       timeout: 300
       runas: root
